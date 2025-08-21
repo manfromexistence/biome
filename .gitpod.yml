@@ -6,7 +6,7 @@
 
 tasks:
   - init: cargo build && pnpm install
-    command: cargo run --bin biome
-      # cargo watch -x run
+    command: cargo watch -x 'run --bin biome'
+      # cargo run --bin biome
 
 

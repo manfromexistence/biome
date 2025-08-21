@@ -62,9 +62,9 @@ pub(crate) mod version;
 
 #[derive(Debug, Clone, Bpaf)]
 #[bpaf(options, version(VERSION))]
-/// Biome official CLI. Use it to check the health of your project or run it to check single files.
+/// DX official CLI. Use it to check the health of your project or run it to check single files.
 pub enum BiomeCommand {
-    /// Shows the Biome version information and quit.
+    /// Shows the DX version information and quit.
     #[bpaf(command)]
     Version(#[bpaf(external(cli_options), hide_usage)] CliOptions),
 
@@ -72,7 +72,7 @@ pub enum BiomeCommand {
     /// Prints information for debugging.
     Rage(
         #[bpaf(external(cli_options), hide_usage)] CliOptions,
-        /// Prints the Biome daemon server logs
+        /// Prints the DX daemon server logs
         #[bpaf(long("daemon-logs"), switch)]
         bool,
         /// Prints the formatter options applied
@@ -82,7 +82,7 @@ pub enum BiomeCommand {
         #[bpaf(long("linter"), switch)]
         bool,
     ),
-    /// Starts the Biome daemon server process.
+    /// Starts the DX daemon server process.
     #[bpaf(command)]
     Start {
         /// Allows to change the prefix applied to the file name of the logs.
